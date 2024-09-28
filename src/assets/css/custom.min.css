@@ -1,2 +1,39 @@
-
 /*# sourceMappingURL=custom.min.css.map */
+
+.footer_credit-text {
+  text-align: center;
+}
+
+.floating-nav {
+  z-index: 100;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 29px;
+  display: block !important;
+  position: fixed;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+@media (max-width: 768px) {
+  .footer-wrap {
+    margin: 50px 0 !important;
+  }
+
+  .footer_legal-list {
+    flex-direction: row !important;
+    gap: 10px;
+  }
+
+  .footer_menu-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .floating-nav {
+    display: none !important;
+  }
+}

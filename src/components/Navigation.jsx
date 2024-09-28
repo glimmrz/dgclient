@@ -1,3 +1,4 @@
+import "../assets/css/custom.min.css";
 import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -32,7 +33,11 @@ const Navigation = () => {
             role="banner"
             data-duration="400"
           >
-            <nav role="navigation" className="nav-menu-2 w-nav-menu">
+            <nav
+              role="navigation"
+              className="nav-menu-2 w-nav-menu"
+              style={{ display: "flex" }}
+            >
               <a
                 href="#hero"
                 className="floating-nav__link arrow w-nav-link"
@@ -60,9 +65,9 @@ const Navigation = () => {
                 {isFrench ? "Connexion" : "Login"}
               </a>
             </nav>
-            <div className="w-nav-button">
+            {/* <div className="w-nav-button">
               <div className="w-icon-nav-menu"></div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
