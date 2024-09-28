@@ -1,0 +1,43 @@
+.language-switcher {
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  z-index: 1000;
+  }
+  
+  .language-button {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    position: relative;
+  }
+  
+  .arrow {
+    margin-left: 10px;
+  }
+  
+  .language-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+  }
+  
+  .language-option {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .language-option:hover {
+    background-color: #f0f0f0;
+  }
+  .language-option.active {
+    background: #f0f0f0;
+  }

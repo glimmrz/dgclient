@@ -1,0 +1,282 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.form-step {
+  display: none;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-step.slide-in {
+  animation-name: slideIn;
+}
+
+.form-step.slide-out {
+  animation-name: slideOut;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  position: relative;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 5px;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+form {
+  width: 100%;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.step-number {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.subtext {
+  font-size: 0.9em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3a3a3a;
+}
+
+button.next,
+button.previous,
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+button.next:hover,
+button.previous:hover,
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button.next:focus,
+button.previous:focus,
+button[type="submit"]:focus {
+  outline: none;
+}
+
+.card {
+  cursor: pointer;
+  border: 2px solid transparent;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.card.selected {
+  border-color: #007bff;
+}
+
+.card .icon {
+  font-size: 1.5rem;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust as needed */
+  width: 100%; /* Ensure it takes full width of the container */
+}
+
+.icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure image scales nicely */
+}
+
+.option_5 {
+  margin: 0 0 15px 15px;
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+
+.option_5 span {
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  padding: 3px 6px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.option_5 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 15px;
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option_5 input[type="checkbox"] {
+  display: none; /* Hide the checkbox */
+}
+
+/* .option_5 span {
+  margin-right: 8px;
+} */
+
+.option_5 input[type="checkbox"]:checked + span + span {
+  color: white; /* Change text color if needed */
+}
+
+.option_5 input[type="checkbox"]:checked + span {
+  background-color: #007bff; /* Change this color to your desired highlight color */
+  color: white;
+}
+
+.option_6 {
+  margin: 0 0 15px 15px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0px;
+  width: 100%;
+  height: 220px;
+}
+
+.option_6 .card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* form  custom css */
+.form-control_custom {
+  border: none;
+  outline: none;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  font-size: 1.4em;
+  color: #fff;
+  background-color: transparent;
+}
+
+hr {
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(255, 255, 255, 1);
+}
+
+.form-step {
+  position: relative;
+  padding-bottom: 50px; /* Adjust based on your layout */
+}
+
+.previous {
+  position: absolute;
+  bottom: 10px; /* Adjust based on your layout */
+  right: 80px; /* Adjust based on your layout */
+}
+.next2 {
+  position: absolute;
+  bottom: 10px; /* Adjust based on your layout */
+  right: 10px; /* Adjust based on your layout */
+}
+
+button.next,
+button.previous,
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 10px;
+}
+.card.selected {
+  background-color: rgba(176, 176, 176, 0.5);
+}

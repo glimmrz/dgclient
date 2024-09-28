@@ -1,0 +1,250 @@
+/* Import the font */
+
+
+
+
+@font-face {
+    font-family: "Brockmann Webfont";
+    src: url("https://assets.website-files.com/5837424ae11409586f837994/660b1cdad136e27ce9840302_brockmann-medium-webfont.ttf")
+        format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Apply the font to the body or specific classes */
+body {
+    font-family: 'Brockmann Webfont', Plusjakartasans, sans-serif;
+}
+
+.footer_heading {
+    font-family: 'Brockmann Webfont', Grifter, sans-serif;
+}
+
+/* The rest of your CSS */
+a {
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 500;
+}
+
+.footer-2 {
+    background-color: black;
+    padding: 60px 5%;
+    display: grid;
+    justify-content: center;
+}
+
+.container-large-11 {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.padding-vertical.padding-xxlarge {
+    padding: 0;
+}
+
+.padding-bottom, .padding-bottom.padding-large {
+    padding-bottom: 40px;
+}
+
+.w-layout-grid {
+    display: grid;
+}
+
+.footer_top-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.footer_menu-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+.footer_link-list {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.margin-bottom-2 {
+    margin-bottom: 20px;
+}
+
+.footer_link {
+    color: #ffffff;
+    opacity: 0.7;
+    padding: 5px 0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer_link:hover {
+    opacity: 1;
+}
+
+.footer_social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer_social-link:hover {
+    opacity: 1;
+}
+
+.icon-embed-xsmall {
+    width: 20px;
+    height: 20px;
+}
+
+.footer_left-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_logo-link img {
+    width: 124px;
+}
+
+.text-style-muted {
+    color: #ffffff;
+    opacity: 0.7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer_form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input.is-footer {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-5.is-footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button-5.is-footer:hover {
+    background-color: #333;
+}
+
+.footer-line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.padding-top.padding-medium {
+    padding-top: 20px;
+}
+
+.footer_bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer_credit-text {
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.footer_legal-list {
+    display: flex;
+    gap: 20px;
+}
+
+.footer_legal-link {
+    font-size: 12px;
+    color: #ffffff;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer_legal-link:hover {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer_top-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer_menu-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer_bottom-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_legal-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-2 {
+        padding: 40px 5%;
+    }
+
+    .footer_link {
+        font-size: 12px;
+    }
+
+    .footer_social-link {
+        font-size: 12px;
+    }
+
+    .footer_credit-text {
+        font-size: 10px;
+    }
+
+    .footer_legal-link {
+        font-size: 10px;
+    }
+
+    .footer_menu-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_link-list {
+        width: 100%;
+    }
+}
