@@ -1,13 +1,25 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const location = useLocation();
-  const isFrench = location.pathname === '/fr';
+  const isFrench = location.pathname === "/fr";
 
   return (
     <>
-      <div className="floating-nav">
+      <div
+        className="floating-nav"
+        style={{
+          position: "sticky",
+          top: 0,
+          bottom: "30px",
+          right: 0,
+          left: 0,
+          margin: "auto",
+          display: "block",
+          width: "fit-content",
+          padding: 0,
+        }}
+      >
         <div className="div-block-17">
           <div
             data-animation="default"
@@ -21,28 +33,31 @@ const Navigation = () => {
             data-duration="400"
           >
             <nav role="navigation" className="nav-menu-2 w-nav-menu">
-              <a href="#hero" className="floating-nav__link arrow w-nav-link"></a>
+              <a
+                href="#hero"
+                className="floating-nav__link arrow w-nav-link"
+              ></a>
               <a href="#hiw" className="floating-nav__link w-nav-link">
-                {isFrench ? 'Comment ça marche' : 'How it works'}
+                {isFrench ? "Comment ça marche" : "How it works"}
               </a>
               <a href="#benefits" className="floating-nav__link w-nav-link">
-                {isFrench ? 'Avantages' : 'Benefits'}
+                {isFrench ? "Avantages" : "Benefits"}
               </a>
               <a href="#services" className="floating-nav__link w-nav-link">
-                {isFrench ? 'Services' : 'Services'}
+                {isFrench ? "Services" : "Services"}
               </a>
               <a href="#plans" className="floating-nav__link w-nav-link">
-                {isFrench ? 'Tarification' : 'Pricing'}
+                {isFrench ? "Tarification" : "Pricing"}
               </a>
               <a href="#faq" className="floating-nav__link w-nav-link">
-                {isFrench ? 'FAQ' : 'FAQs'}
+                {isFrench ? "FAQs" : "FAQs"}
               </a>
               <a
                 href="https://client-portal-ebon-iota.vercel.app"
                 ms-hide-element="true"
                 className="floating-nav__link login w-nav-link"
               >
-                {isFrench ? 'Connexion' : 'Login'}
+                {isFrench ? "Connexion" : "Login"}
               </a>
             </nav>
             <div className="w-nav-button">

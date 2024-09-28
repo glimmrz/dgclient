@@ -1,20 +1,24 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import NotFound from './components/NotFound';
-import Custom from './components/custom';
-import LogoForm from './components/LogoForm'; // Assuming your form component is in LogoForm.jsx
-import MarketingForm from './components/MarketingForm';
-import WebForm from './components/WebForm';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsAndConditions from './pages/TermsAndConditions';
-import HeroFR from './components/HeroFR';
-import ThankYouPage from './pages/ThankYouPage';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Import AOS styles
-
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import NotFound from "./components/NotFound";
+import Custom from "./components/custom";
+import LogoForm from "./components/LogoForm"; // Assuming your form component is in LogoForm.jsx
+import MarketingForm from "./components/MarketingForm";
+import WebForm from "./components/WebForm";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import HeroFR from "./components/HeroFR";
+import ThankYouPage from "./pages/ThankYouPage";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const App = () => {
   const location = useLocation();
@@ -22,23 +26,22 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Set animation duration
-      once: true,     // Animation happens only once - while scrolling down
+      once: true, // Animation happens only once - while scrolling down
     });
-    AOS.refresh();     // Refresh AOS for lazy-loaded content or dynamic pages
+    AOS.refresh(); // Refresh AOS for lazy-loaded content or dynamic pages
   }, []);
 
   AOS.init({
     duration: 1000,
     once: true,
-    disable: 'mobile',  // Disable animations on mobile
+    disable: "mobile", // Disable animations on mobile
   });
-  
 
   useEffect(() => {
     // Load the Google Analytics script
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-QF0DMQNTRE';
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-QF0DMQNTRE";
     document.head.appendChild(script);
 
     // Initialize the gtag function
@@ -47,11 +50,10 @@ const App = () => {
       function gtag() {
         window.dataLayer.push(arguments);
       }
-      gtag('js', new Date());
-      gtag('config', 'G-QF0DMQNTRE');
+      gtag("js", new Date());
+      gtag("config", "G-QF0DMQNTRE");
     };
   }, []);
-
 
   React.useEffect(() => {
     const scripts = [
@@ -67,42 +69,61 @@ const App = () => {
     ];
 
     // Clear existing scripts to avoid duplicates
-    document.querySelectorAll('script[data-route]').forEach(script => script.remove());
+    document
+      .querySelectorAll("script[data-route]")
+      .forEach((script) => script.remove());
 
     // Add new scripts based on the route
-    scripts.forEach(src => {
-      const script = document.createElement('script');
+    scripts.forEach((src) => {
+      const script = document.createElement("script");
       script.src = src;
       script.defer = true;
-      script.setAttribute('data-route', location.pathname);
+      script.setAttribute("data-route", location.pathname);
       document.body.appendChild(script);
     });
 
     return () => {
-      document.querySelectorAll('script[data-route]').forEach(script => script.remove());
+      document
+        .querySelectorAll("script[data-route]")
+        .forEach((script) => script.remove());
     };
   }, [location.pathname]);
 
   return (
     <>
       <Helmet>
-        {location.pathname !== '/logo' && (
+        {location.pathname !== "/logo" && (
           <>
             <link rel="preconnect" href="https://fonts.bunny.net" />
-            <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-            <link href="/assets/frontend/css/main_custom.min.css" rel="stylesheet" />
-            <link href="/assets/frontend/css/footer_style.css" rel="stylesheet" />
+            <link
+              href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
+              rel="stylesheet"
+            />
+            <link
+              href="/assets/frontend/css/main_custom.min.css"
+              rel="stylesheet"
+            />
+            <link
+              href="/assets/frontend/css/footer_style.css"
+              rel="stylesheet"
+            />
             <link href="/assets/frontend/css/style.css" rel="stylesheet" />
-            <link href="/assets/frontend/css/calendly_widget.css" rel="stylesheet" />
-           
+            <link
+              href="/assets/frontend/css/calendly_widget.css"
+              rel="stylesheet"
+            />
           </>
         )}
-        <script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="3975ff834033ff0cc12c91f6a288ec41" defer></script>
+        <script
+          src="https://api.memberstack.io/static/memberstack.js?custom"
+          data-memberstack-id="3975ff834033ff0cc12c91f6a288ec41"
+          defer
+        ></script>
       </Helmet>
 
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/fr" element={<HeroFR />}/>
+        <Route path="/fr" element={<HeroFR />} />
         <Route path="/form/logo" element={<LogoForm />} />
         <Route path="/form/web" element={<WebForm />} />
         <Route path="/form/marketing" element={<MarketingForm />} />
@@ -119,9 +140,8 @@ const App = () => {
 const AppWrapper = () => (
   <HelmetProvider>
     <Router>
-    {!window.location.pathname.startsWith('/form') && <Navigation />}
-
       <App />
+      {!window.location.pathname.startsWith("/form") && <Navigation />}
     </Router>
   </HelmetProvider>
 );
