@@ -3,20 +3,20 @@ import axios from "axios";
 import { API_URL } from "../utils/constants";
 
 const Services = () => {
-  const [projectPhotos, setProjectPhotos] = useState([]);
+  // const [projectPhotos, setProjectPhotos] = useState([]);
 
-  useEffect(() => {
-    const fetchPhotos = async () => {
-      try {
-        const response = await axios.get(`${API_URL}/api/project-photos`);
-        setProjectPhotos(response.data);
-      } catch (err) {
-        console.error("Error fetching the project photos:", err);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchPhotos = async () => {
+  //     try {
+  //       const response = await axios.get(`${API_URL}/api/project-photos`);
+  //       setProjectPhotos(response.data);
+  //     } catch (err) {
+  //       console.error("Error fetching the project photos:", err);
+  //     }
+  //   };
 
-    fetchPhotos();
-  }, []);
+  //   fetchPhotos();
+  // }, []);
 
   return (
     <div id="services" className="scop">
@@ -83,7 +83,7 @@ const Services = () => {
           className="work__flex"
         >
           <div className="w-layout-grid grid-1">
-            {projectPhotos.map((photo, index) => (
+            {/* {projectPhotos.map((photo, index) => (
               <img
                 key={index}
                 src={`./assets/frontend/portfolio/${photo.image}`}
@@ -92,7 +92,63 @@ const Services = () => {
                 alt=""
                 className="image-87"
               />
-            ))}
+            ))} */}
+            <img
+              src={`./assets/frontend/portfolio/lauren.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/ngo-project.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/resturant.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/pizza.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/wood.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/saas.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/custom.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
+            <img
+              src={`./assets/frontend/portfolio/bodybuilding.jpg`}
+              loading="lazy"
+              sizes="(max-width: 479px) 85vw, (max-width: 991px) 87vw, 88vw"
+              alt=""
+              className="image-87"
+            />
           </div>
         </div>
         <div className="button__wrapper _33">
