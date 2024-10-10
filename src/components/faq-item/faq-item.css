@@ -1,0 +1,20 @@
+.dropdown-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq__arrow {
+  transition: all 0.3s ease;
+}
+
+.faq__arrow.rotate {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .dropdown-container {
+    gap: 2rem;
+  }
+}

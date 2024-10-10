@@ -7,7 +7,6 @@ import FaqItem from "./faq-item/faq-item";
 const FAQ = () => {
   const location = useLocation();
   const isFrench = location.pathname === "/fr";
-
   const [open, setOpen] = useState(Array(7).fill(false));
 
   const toggleAnswer = (index) => {
@@ -150,7 +149,7 @@ const FAQ = () => {
             </h2>
             <div className="faq__list">
               {questions.map((item, index) => (
-                <div data-w-id={item.wid} className="faq__row" key={index}>
+                <div className="faq__row" key={index}>
                   {/* <div className="faq__row-left">
                     <p
                       className="faq__title"
@@ -167,13 +166,12 @@ const FAQ = () => {
                     )}
                   </div> */}
                   <FaqItem item={item} />
-                  <img
+                  {/* <img
                     src="./assets/frontend/svg/svg_16.svg"
                     loading="lazy"
                     className="faq__arrow"
                     alt="Expand/Collapse"
-                    onClick={() => toggleAnswer(index)}
-                  />
+                  /> */}
                 </div>
               ))}
             </div>
