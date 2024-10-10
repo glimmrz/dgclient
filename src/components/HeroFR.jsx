@@ -53,8 +53,8 @@ const HeroFR = () => {
         if (filteredHeader) {
           setHeader({
             logo: filteredHeader.logo,
-            title: filteredHeader.title,
-            secondary_title: filteredHeader.secondary_title,
+            title: filteredHeader.title.replace(/�/g, "é"),
+            secondary_title: filteredHeader.secondary_title.replace(/�/g, "é"),
           });
         } else {
           console.error("No header found for the specified language.");
